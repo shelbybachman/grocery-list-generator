@@ -40,7 +40,3 @@ to change the font family of the font shown on the list image, add the relevant 
 then, you will need to update relevant lines in the program `grocery_list.py`:
 - update `FONTFILE_LIGHT` to define the font file for the date & list items (example: `'utils/Roboto-Light.ttf'`)
 - update `FONTFILE_BOLD` to define the font file for the title & category names (example: `'utils/Roboto-Bold.ttf'`)
-
-#### customize background color of the list image
-
-to change the background color of the list image, find the RGB values for the desired background color. then update the `RGB_R`, `RGB_G`, and `RGB_B` values accordingly.
