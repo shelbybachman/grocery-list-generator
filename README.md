@@ -1,4 +1,4 @@
-## grocery list generator
+# grocery list generator
 
 this repository contains code for **shelby's code in place 2021 final project**.  it is a python program which creates a formatted grocery list based on user input in the console.
 
@@ -16,14 +16,26 @@ to use the generator yourself, follow these steps:
 
 - clone the repo: `git clone https://github.com/shelbybachman/grocery-list-generator.git`
 - navigate into the directory: `cd grocery-list-generator`
-- run the program: `python grocery_list.py`
+- run the program: `python grocery_list.py`:
+
+![image of running program](doc/screenshots/intro.png) 
+
 - when prompted, enter items and quantities
     - enter singular nouns only (e.g. `banana` rather than `bananas`)
     - enter integer quantities only
+      
+![image of entering items and quantities](doc/screenshots/entry.png) 
+
 - when done entering all your items, press `Enter`
-- your grocery list will be saved in two ways:
-    - as plain text in the console, which can be copied to list manager of your choice
-    - as an image, in the subdirectory `lists/`
+- your grocery list will be saved in two ways. first, as plain text in the console, which can be copied to list manager of your choice:
+  
+![image of plain text list printed by program](doc/screenshots/list_text.png) 
+
+- second as an image, in the subdirectory `lists/`:
+
+![image of list image location](doc/screenshots/list_image_loc.png)
+
+![image of plain list image created by program](doc/screenshots/list_image.png)
 
 ### customization
 
