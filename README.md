@@ -35,7 +35,7 @@ to use the generator yourself, follow these steps:
 
 ![image of list image location](doc/screenshots/list_image_loc.png)
 
-![image of plain list image created by program](doc/screenshots/list_image.png)
+![image of plain list image created by program](lists/grocery_list_2021-05-26.png)
 
 ### customization
 
