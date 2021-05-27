@@ -29,6 +29,11 @@ IMAGE_HEIGHT = 1334
 FONTFILE_LIGHT = 'utils/Roboto-Light.ttf'
 FONTFILE_BOLD = 'utils/Roboto-Bold.ttf'
 
+# RGB values for image background color
+BG_R = 187
+BG_G = 242
+BG_B = 224
+
 
 def main():
 
@@ -269,13 +274,14 @@ def print_grocery_list(user_dict):
 
 
 def create_grocery_list_image(user_dict, IMAGE_WIDTH, IMAGE_HEIGHT,
+                              BG_R, BG_G, BG_B,
                               fontfile_light, fontfile_bold):
     """
     create an image showing grocery list as text
     """
     # create image object
     image = Image.new('RGB', (IMAGE_WIDTH, IMAGE_HEIGHT),
-                      (187, 242, 224))
+                      (BG_R, BG_G, BG_B))
 
     # initialize drawing context
     draw = ImageDraw.Draw(image)
