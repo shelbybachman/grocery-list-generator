@@ -6,13 +6,6 @@ this program takes user input about items to buy at the grocery store
 and creates a formatted grocery list
 """
 
-# remaining things to do:
-# [] prompt user to add unknown item to database
-# [] more decomposition of main() function
-# [] warning if list expands beyond image boundaries
-# [] make preferences more explicit in program
-
-
 import os
 import csv
 from datetime import date
