@@ -1,0 +1,217 @@
+---
+title: "Grocery List Generator"
+subtitle: "Code in Place 2021 Final Project"
+author: "Shelby Bachman"
+date: "May 28, 2021"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    seal: false
+    css:
+      - default
+      - rladies
+      - rladies-fonts
+      - css/grocery.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+---
+
+```{r setup, include = FALSE}
+
+# loading libraries
+library(fontawesome)
+
+# preset code chunk options
+knitr::opts_chunk$set(dpi = 400,            # ensures high resolution images
+                      echo = FALSE,         # FALSE: code chunks don't show
+                      warning = FALSE,      # FALSE: suppresses warning messages
+                      error = FALSE)        # FALSE: Suppresses error messages
+
+```
+
+class: title-slide, center, middle, inverse
+background-image: url(img/produce.jpg)
+background-position: bottom
+background-size: cover
+
+# `r rmarkdown::metadata$title`
+## `r rmarkdown::metadata$subtitle`
+### `r rmarkdown::metadata$author`
+
+---
+
+# The grocery list generator
+
+--
+
+### This program creates a formatted, organized grocery list from user input.
+
+### It has a number of features, including:
+
+- the use of strings, lists, dictionaries & control flow
+- the reading of files & drawing of images
+- creation of a grocery list in multiple formats
+- multiple customization options
+
+--
+
+<br>
+<br>
+<br>
+<br>
+### Let's see how it works!
+
+
+---
+
+# Running the program
+
+### Start the program via the command line:  `python grocery_list.py`
+
+### A welcome message appears:
+```{r fig_intro, echo = FALSE, out.width = 400}
+
+knitr::include_graphics('img/intro.png')
+
+```
+
+---
+
+# Entering list items
+
+.pull-left[
+
+
+### When prompted, enter each item you wish to buy, one at a time
+
+
+- A current limitation of the program is that the user must enter a **singular nouns**
+- Behind the scenes, the program is trying to identify the item in its database
+- The program will prompt to correct the entry if the item is not found
+
+### After each item, the program will prompts you for a quantity
+
+- Quantity must be convertable to an integer, otherwise the program will prompt for another quantity
+
+]
+
+.pull-right[
+<center>
+```{r fig_entry, echo = FALSE, out.width = 350}
+
+knitr::include_graphics('img/entry.png')
+
+```
+</center>
+]
+
+
+---
+
+# The grocery list
+
+.pull-left[
+### Once you enter all list item, the program displays a grocery list
+
+- The list is organized by category
+- Contains all inputted items and quantities
+
+### The list is displayed in the console
+
+- Can be easily copied to list management software of choice
+]
+
+.pull-right[
+<center>
+```{r fig_list_text, echo = FALSE, out.width = 200}
+
+knitr::include_graphics('img/list_text_cropped.png')
+
+```
+</center>
+]
+
+---
+# The grocery list
+
+.pull-left[
+### The list is also saved as a `.png` image
+
+- Dimensions scaled for a smartphone
+- Current date included
+- Can be emailed or shared to the cloud
+- Saved to the `lists/` subdirectory in the same folder as the program
+
+<br>
+
+```{r fig_list_loc, echo = FALSE, out.width = 400}
+
+knitr::include_graphics('img/list_image_loc.png')
+
+```
+
+]
+
+.pull-right[
+<center>
+```{r fig_list_image, echo = FALSE, out.width = 350}
+
+knitr::include_graphics('img/grocery_list_2021-05-26_cropped.png')
+
+```
+</center>
+]
+
+
+---
+# How it works
+
+.pull-left[
+### User inputs are checked against a dictionary of food items, created from `.csv` files
+
+- At the start of the program, these `.csv` files are read into a single dictionary, with keys as categories and values as lists of foods
+
+### The food dictionary is used to organize inputs according to category
+
+### The `.png` image is created by "drawing" text on a blank image
+
+]
+
+.pull-right[
+<center>
+<br>
+```{r fig_database, echo = FALSE, out.width = 250}
+
+knitr::include_graphics('img/database.png')
+
+```
+</center>
+]
+
+
+---
+# Customization
+
+### Food items in the database can be added to relevant `.csv` files in the `data/` subdirectory
+
+### List image dimensions can be customized by updating two lines in the program code:
+
+```{python customization_dims, echo = TRUE}
+# image dimensions
+# (currently set for iphone 6)
+IMAGE_WIDTH = 750
+IMAGE_HEIGHT = 1334
+```
+
+### Font family used in the list image can be customized via files in the `utils/` subdirectory:
+
+```{python customization_font, echo = TRUE}
+# files containing fonts
+# (light font will be used for date & items)
+# (bold font will be used for title & section headings)
+FONTFILE_LIGHT = 'utils/Roboto-Light.ttf'
+FONTFILE_BOLD = 'utils/Roboto-Bold.ttf'
+```
