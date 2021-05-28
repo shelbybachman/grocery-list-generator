@@ -1,0 +1,11 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+doc/slides/grocery-list-generator.Rproj
+doc/slides/slides.Rmd
+doc/slides/css/
+doc/slides/img/
+doc/slides/libs/
+doc/video/
+/doc/slides/index.pdf
