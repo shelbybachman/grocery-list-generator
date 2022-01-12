@@ -1,8 +1,8 @@
-# grocery list generator
+This repository contains materials for for my final project from Stanford's 2021 [Code in Place](https://codeinplace.stanford.edu/) course. 
 
-this repository contains code for **shelby's code in place 2021 final project**.  it is a python program which creates a formatted grocery list based on user input in the console.
-
-you can view a demo of the grocery list generator [here](https://youtu.be/T3yRK3ouw7g).
+### project overview
+For project, I created a python program that generates a formatted grocery list based on user input in the console.<br>
+You can view a demo of the grocery list generator [here](https://youtu.be/T3yRK3ouw7g).
 
 ### dependencies
 
